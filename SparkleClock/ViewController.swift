@@ -9,10 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var timer: NSTimer!
+    var dateFormatter: NSDateFormatter!
+    @IBOutlet var clockLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("updateClock"), userInfo: nil, repeats: true)
+        dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.updateClock()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +31,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func updateClock() {
+        var timeToDisplay = self.dateFormatter.stringFromDate(NSDate())
+        self.clockLabel.text = timeToDisplay
+    }
 
 }
 
