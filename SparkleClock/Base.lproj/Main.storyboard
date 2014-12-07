@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,24 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00:01 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqk-II-y4F">
-                                <rect key="frame" x="183.5" y="275" width="234.5" height="50"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="42"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAi-1F-b3C" customClass="FBShimmeringView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="pqk-II-y4F" secondAttribute="centerX" id="0LO-tU-N2z"/>
-                            <constraint firstAttribute="centerY" secondItem="pqk-II-y4F" secondAttribute="centerY" id="BjD-Q8-RCW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rAi-1F-b3C" secondAttribute="trailing" constant="-16" id="Uyj-Dg-t50"/>
+                            <constraint firstItem="rAi-1F-b3C" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="XPa-AO-zqa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rAi-1F-b3C" secondAttribute="bottom" id="cvy-uS-aDq"/>
+                            <constraint firstItem="rAi-1F-b3C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="ewu-3X-L5O"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="clockLabel" destination="pqk-II-y4F" id="Hd0-se-k9a"/>
+                        <outlet property="shimmeringView" destination="rAi-1F-b3C" id="JC7-Fd-ahS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00:01 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pqk-II-y4F">
+                    <rect key="frame" x="0.0" y="0.0" width="234.5" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="42"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
         </scene>
     </scenes>

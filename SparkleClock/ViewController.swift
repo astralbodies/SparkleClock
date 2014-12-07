@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var timer: NSTimer!
     var dateFormatter: NSDateFormatter!
+    @IBOutlet var shimmeringView: FBShimmeringView!
     @IBOutlet var clockLabel: UILabel!
 
     override func viewDidLoad() {
@@ -20,6 +21,9 @@ class ViewController: UIViewController {
         dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
+        
+        self.shimmeringView.contentView = self.clockLabel
+        self.shimmeringView.shimmering = true
     }
     
     override func viewWillAppear(animated: Bool) {
