@@ -13,6 +13,7 @@
 		93AFDFF11A3282ED000EDF95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93AFDFF01A3282ED000EDF95 /* Images.xcassets */; };
 		93AFDFF41A3282ED000EDF95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93AFDFF21A3282ED000EDF95 /* LaunchScreen.xib */; };
 		93AFE0001A3282EE000EDF95 /* SparkleClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFDFFF1A3282EE000EDF95 /* SparkleClockTests.swift */; };
+		93CC4BFA1A352E350075FA20 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CC4BF91A352E350075FA20 /* QuartzCore.framework */; };
 		B66FC31222EA5873F66221B9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0421CB9DCA370A6AF241325 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		93AFDFFE1A3282EE000EDF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93AFDFFF1A3282EE000EDF95 /* SparkleClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleClockTests.swift; sourceTree = "<group>"; };
 		93AFE0091A33E0DE000EDF95 /* SparkleClock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SparkleClock-Bridging-Header.h"; sourceTree = "<group>"; };
+		93CC4BF91A352E350075FA20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0421CB9DCA370A6AF241325 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CC4BFA1A352E350075FA20 /* QuartzCore.framework in Frameworks */,
 				B66FC31222EA5873F66221B9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +136,7 @@
 		C44E2300840869FC3829EBF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93CC4BF91A352E350075FA20 /* QuartzCore.framework */,
 				D0421CB9DCA370A6AF241325 /* libPods.a */,
 			);
 			name = Frameworks;

@@ -29,6 +29,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rAi-1F-b3C" secondAttribute="bottom" id="cvy-uS-aDq"/>
                             <constraint firstItem="rAi-1F-b3C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="ewu-3X-L5O"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1rF-xR-kYQ" appends="YES" id="gfe-1G-b9J"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="clockLabel" destination="pqk-II-y4F" id="Hd0-se-k9a"/>
@@ -43,6 +46,11 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tapGestureRecognizer id="1rF-xR-kYQ">
+                    <connections>
+                        <action selector="didTapView" destination="BYZ-38-t0r" id="nUX-Js-A7W"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

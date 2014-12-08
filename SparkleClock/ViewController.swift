@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
     var timer: NSTimer!
@@ -40,5 +41,14 @@ class ViewController: UIViewController {
         self.clockLabel.text = timeToDisplay
     }
 
+    @IBAction func didTapView() {
+        self.shimmeringView.shimmering = !self.shimmeringView.shimmering
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.clockLabel.transform = CGAffineTransformMakeScale(1.2, 1.2)
+        }) { (finished) -> Void in
+            self.clockLabel.transform = CGAffineTransformIdentity
+        }
+    }
 }
 
