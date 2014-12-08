@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
         
+        self.clockLabel.adjustsFontSizeToFitWidth = true
+        
         self.shimmeringView.contentView = self.clockLabel
         self.shimmeringView.shimmering = true
     }
@@ -34,6 +36,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
     func updateClock() {
