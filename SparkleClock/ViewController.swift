@@ -23,8 +23,6 @@ class ViewController: UIViewController {
         dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
         
-        self.clockLabel.adjustsFontSizeToFitWidth = true
-        
         self.shimmeringView.contentView = self.clockLabel
         self.shimmeringView.shimmering = true
     }
