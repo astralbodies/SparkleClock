@@ -31,6 +31,18 @@ class ViewController: UIViewController {
         self.updateClock()
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIApplication.sharedApplication().idleTimerDisabled = true
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        UIApplication.sharedApplication().idleTimerDisabled = false
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
