@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.updateClock()
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -60,11 +60,13 @@ class ViewController: UIViewController {
     @IBAction func didTapView() {
         self.shimmeringView.shimmering = !self.shimmeringView.shimmering
         
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .CurveEaseIn, animations: {
             self.clockLabel.transform = CGAffineTransformMakeScale(1.2, 1.2)
-        }) { (finished) -> Void in
-            self.clockLabel.transform = CGAffineTransformIdentity
-        }
+            }, completion: { (finished) -> Void in
+                UIView.animateWithDuration(0.5, delay: 0.25, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .CurveEaseOut, animations: {
+                    self.clockLabel.transform = CGAffineTransformIdentity
+                    }, completion: nil)
+        })
     }
 }
 
