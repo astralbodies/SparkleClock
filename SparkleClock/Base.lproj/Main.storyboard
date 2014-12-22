@@ -36,6 +36,7 @@
                     <connections>
                         <outlet property="clockLabel" destination="pqk-II-y4F" id="Hd0-se-k9a"/>
                         <outlet property="shimmeringView" destination="rAi-1F-b3C" id="JC7-Fd-ahS"/>
+                        <outlet property="tapGestureRecognizer" destination="1rF-xR-kYQ" id="DyY-NX-CxF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
