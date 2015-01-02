@@ -12,7 +12,6 @@ import QuartzCore
 class ViewController: UIViewController {
     var timer: NSTimer!
     var dateFormatter: NSDateFormatter!
-    @IBOutlet var shimmeringView: FBShimmeringView!
     @IBOutlet var clockLabel: UILabel!
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
 
@@ -23,9 +22,6 @@ class ViewController: UIViewController {
         dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
-        
-        self.shimmeringView.contentView = self.clockLabel
-        self.shimmeringView.shimmering = true
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,11 +40,6 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().idleTimerDisabled = false
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -59,7 +50,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapView() {
-        self.shimmeringView.shimmering = !self.shimmeringView.shimmering
         self.tapGestureRecognizer.enabled = false
         
         UIView.animateWithDuration(0.25, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .CurveEaseIn, animations: {
