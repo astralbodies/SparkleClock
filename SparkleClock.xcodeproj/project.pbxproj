@@ -37,7 +37,6 @@
 		93AFDFF91A3282EE000EDF95 /* SparkleClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkleClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AFDFFE1A3282EE000EDF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93AFDFFF1A3282EE000EDF95 /* SparkleClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleClockTests.swift; sourceTree = "<group>"; };
-		93AFE0091A33E0DE000EDF95 /* SparkleClock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SparkleClock-Bridging-Header.h"; sourceTree = "<group>"; };
 		93CC4BF91A352E350075FA20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -88,7 +87,6 @@
 				93AFDFF01A3282ED000EDF95 /* Images.xcassets */,
 				93AFDFF21A3282ED000EDF95 /* LaunchScreen.xib */,
 				93AFDFE71A3282ED000EDF95 /* Supporting Files */,
-				93AFE0091A33E0DE000EDF95 /* SparkleClock-Bridging-Header.h */,
 			);
 			path = SparkleClock;
 			sourceTree = "<group>";
@@ -356,7 +354,6 @@
 				INFOPLIST_FILE = SparkleClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SparkleClock/SparkleClock-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -369,7 +366,6 @@
 				INFOPLIST_FILE = SparkleClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SparkleClock/SparkleClock-Bridging-Header.h";
 			};
 			name = Release;
 		};
